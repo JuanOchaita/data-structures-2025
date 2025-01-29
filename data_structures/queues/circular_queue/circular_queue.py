@@ -27,6 +27,7 @@ class CircularQueue:
                 
             if self.front == self.rear and self.front != -1 and self.rear != -1: # Teoricamente esto arregla el problema
                 print('Queue overflow...')
+                self.rear -= 1
                 return None
 
 
