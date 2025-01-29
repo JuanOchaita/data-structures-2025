@@ -2,7 +2,6 @@
 Circular Queue implementation.
 '''
 
-
 class CircularQueue:
     def __init__(self, size: int):
         self.max = size
@@ -25,6 +24,11 @@ class CircularQueue:
             self.rear = 0
         else:
             self.rear += 1
+                
+            if self.front == self.rear and self.front != -1 and self.rear != -1: # Teoricamente esto arregla el problema
+                print('Queue overflow...')
+                return None
+
 
         self.elements[self.rear] = val
         
